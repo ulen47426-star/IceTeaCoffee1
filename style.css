@@ -198,7 +198,7 @@ h1 {
 ======================================== */
 
 .Plogo{
-    width: 300px;
+    width: 400px;
     height: 200px;
     padding: 0px;
 }
@@ -541,4 +541,5 @@ footer {
         font-size: 0.95rem;
     }
 }
+
 
