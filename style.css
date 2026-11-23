@@ -1,0 +1,533 @@
+
+/* ========================================
+   1. ROOT VARIABLES & THEME
+======================================== */
+
+:root {
+    --ice: #e8f5f3;
+    --surface: #ffffff;
+    --ink: #0d3a39;
+    --muted: #4d7371;
+    --tea: #e48a24;
+    --tea-deep: #b9640c;
+    --line: #bfdcd8;
+    --glass: #ffffff99;
+
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --ice: #0b2523;
+        --surface: #11312f;
+        --ink: #e6f6f3;
+        --muted: #9cc3bf;
+        --tea: #f0a043;
+        --tea-deep: #f0a043;
+        --line: #245250;
+        --glass: #ffffff1f;
+
+        color-scheme: dark;
+    }
+}
+
+:root[data-theme="dark"] {
+    --ice: #0b2523;
+    --surface: #11312f;
+    --ink: #e6f6f3;
+    --muted: #9cc3bf;
+    --tea: #f0a043;
+    --tea-deep: #f0a043;
+    --line: #245250;
+    --glass: #ffffff1f;
+
+    color-scheme: dark;
+}
+
+
+/* ========================================
+   2. GLOBAL RESET
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--ice);
+    color: var(--ink);
+
+    font-family:
+        "Kantumruy Pro",
+        "Khmer OS Battambang",
+        "Noto Sans Khmer",
+        system-ui,
+        sans-serif;
+
+    line-height: 1.85;
+    font-size: 1.05rem;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid var(--tea);
+    outline-offset: 3px;
+    border-radius: 6px;
+}
+
+
+/* ========================================
+   3. MAIN CONTAINER
+======================================== */
+
+.wrap {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+
+/* ========================================
+   4. HEADER & NAVIGATION
+======================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--tea-deep);
+}
+
+nav {
+    display: flex;
+    gap: 1.4rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--ink);
+}
+
+
+/* ========================================
+   5. HERO SECTION
+======================================== */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 3rem 0 4rem;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 7vw, 4.4rem);
+    line-height: 1.35;
+    margin: 0 0 1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    font-size: 50px;
+}
+
+.lead {
+    color: var(--muted);
+    max-width: 30em;
+    margin: 0 0 1.8rem;
+}
+
+.btns {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.6rem;
+    border-radius: 999px;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    background: var(--tea);
+    color: #2a1700;
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 2px solid var(--ink);
+    color: var(--ink);
+}
+
+
+/* ========================================
+   6. GLASS / DRINK ILLUSTRATION
+======================================== */
+
+.glass-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.glass {
+    position: relative;
+    width: 200px;
+    height: 300px;
+}
+
+
+/* Cup */
+
+.cup {
+    position: absolute;
+    inset: 40px 0 0 0;
+
+    border-radius:
+        14px 14px 48px 48px /
+        14px 14px 60px 60px;
+
+    background: linear-gradient(
+        180deg,
+        #f7c978 0%,
+        var(--tea) 45%,
+        #a85508 100%
+    );
+
+    clip-path: polygon(
+        0 0,
+        100% 0,
+        88% 100%,
+        12% 100%
+    );
+
+    overflow: hidden;
+    box-shadow: inset 0 0 0 3px #ffffff55;
+}
+
+.cup::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 14px;
+
+    background: #fff6;
+}
+
+
+/* Cup Shine */
+
+.shine {
+    position: absolute;
+    left: 14%;
+    top: 50px;
+
+    width: 10px;
+    height: 190px;
+
+    border-radius: 8px;
+    background: #ffffff66;
+
+    transform: rotate(3deg);
+    z-index: 2;
+}
+
+
+/* Ice Cubes */
+
+.cube {
+    position: absolute;
+
+    width: 64px;
+    height: 64px;
+
+    border-radius: 12px;
+    background: #ffffff55;
+    border: 2px solid #ffffff99;
+
+    z-index: 1;
+}
+
+.c1 {
+    left: 20px;
+    top: 70px;
+
+    transform: rotate(-12deg);
+    animation: bob 5s ease-in-out infinite;
+}
+
+.c2 {
+    left: 96px;
+    top: 100px;
+
+    transform: rotate(14deg);
+    animation: bob 6s ease-in-out -2s infinite;
+}
+
+.c3 {
+    left: 56px;
+    top: 150px;
+
+    transform: rotate(-4deg);
+    animation: bob 5.5s ease-in-out -1s infinite;
+}
+/* Lemon */
+
+.lemon {
+    position: absolute;
+    right: -12px;
+    top: 36px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    background: #f6d95a;
+    border: 6px solid #f1c92a;
+
+    z-index: 3;
+    box-shadow: inset 0 0 0 4px #fbeb9a;
+}
+
+
+/* Straw */
+
+.straw {
+    position: absolute;
+    left: 112px;
+    top: -30px;
+
+    width: 12px;
+    height: 200px;
+
+    background: var(--ink);
+    border-radius: 6px;
+
+    transform: rotate(12deg);
+    z-index: 0;
+}
+
+
+/* ========================================
+   7. ANIMATION
+======================================== */
+
+@keyframes bob {
+    50% {
+        translate: 0 -10px;
+    }
+}
+
+
+/* Reduce Motion */
+
+@media (prefers-reduced-motion: reduce) {
+    .cube {
+        animation: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+
+/* ========================================
+   8. GENERAL SECTIONS
+======================================== */
+
+section {
+    padding: 3.5rem 0;
+    border-top: 1px solid var(--line);
+}
+
+h2 {
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    margin: 0 0 0.6rem;
+    line-height: 1.4;
+}
+
+.sub {
+    color: var(--muted);
+    margin: 0 0 2rem;
+    font-size: 20px;
+}
+
+
+/* ========================================
+   9. MENU SECTION
+======================================== */
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 3.5rem;
+}
+h3 {
+    margin: 0 0 0.8rem;
+    font-size: 1.2rem;
+    color: var(--tea-deep);
+}
+.item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    padding: 0.35rem 0;
+}
+.item b {
+    font-weight: 600;
+}
+.item i {
+    flex: 1;
+    border-bottom: 2px dotted var(--line);
+    transform: translateY(-4px);
+}
+.item span {
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+.note {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-top: 1.5rem;
+}
+
+
+/* ========================================
+   10. ABOUT SECTION
+======================================== */
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about p {
+    margin: 0 0 1rem;
+    max-width: 34em;
+}
+
+
+/* Facts Card */
+.facts {
+    background: var(--surface);
+    border-radius: 20px;
+    padding: 1.5rem 1.8rem;
+
+    align-self: start;
+}
+.facts dt {
+    font-weight: 700;
+    margin-top: 0.8rem;
+}
+.facts dt:first-child {
+    margin-top: 0;
+}
+.facts dd {
+    margin: 0;
+    color: var(--muted);
+}
+
+
+/* ========================================
+   11. FOOTER
+======================================== */
+
+footer {
+    padding: 2rem 0 3rem;
+
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+
+    font-size: 0.95rem;
+}
+
+
+/* ========================================
+   12. UTILITY CLASSES
+======================================== */
+
+[hidden] {
+    display: none !important;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: var(--muted);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back:hover {
+    color: var(--ink);
+}
+
+
+/* Menu ID */
+
+#menu {
+    border-top: 0;
+    padding-top: 2rem;
+}
+
+
+/* ========================================
+   13. RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 760px) {
+
+    .hero,
+    .menu,
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 1.5rem;
+    }
+
+    .glass-wrap {
+        order: -1;
+    }
+
+    nav {
+        gap: 1rem;
+        font-size: 0.95rem;
+    }
+}

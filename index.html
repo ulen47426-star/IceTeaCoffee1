@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IceTea Coffee</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="logo" href="#top">Wecome to <span>IceTea</span></a>
+    <nav aria-label="ម៉ឺនុយសំខាន់">
+      <a href="#about">អំពីយើង</a>
+      <a href="#visit">ទំនាក់ទំនង</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <div class="hero" data-view="home">
+      <div>
+        <h1>តែទឹកកក<br>ស្អំបេះដូង</h1>
+        <p class="lead">IceTea Coffee ហាងកាហ្វេសម្រាប់មនុស្សស្មោះ </p>
+        <div class="btns">
+          <a class="btn" href="#menu">ភេសជ្ជៈ</a>
+          <button class="btn" onclick="openMap()">Map</button>
+        </div>
+      </div>
+      <div class="glass-wrap" aria-hidden="true">
+        <div class="glass">
+          <div class="straw"></div>
+          <div class="cup"></div>
+          <div class="cube c1"></div>
+          <div class="cube c2"></div>
+          <div class="cube c3"></div>
+          <div class="shine"></div>
+          <div class="lemon"></div>
+        </div>
+      </div>
+    </div>
+
+    <section id="menu" data-view="menu" hidden>
+      <a class="btn" href="#top">ត្រឡប់</a>
+      <h2><br>ម៉ឺនុយ</h2>
+      <p class="sub">ជ្រើសរើសកម្រិតស្ករ និងទឹកកក បានតាមអំពើរចិត្ត 🙂</p>
+      <div class="menu">
+        <div>
+          <h3>តែទឹកកក</h3>
+          <div class="item"><b>តែក្រូចឆ្មារ</b><i></i><span>$1.50</span></div>
+          <div class="item"><b>តែក្រូចឆ្មារទឺកឃ្មុំ</b><i></i><span>$1.50</span></div>
+          <div class="item"><b>តែទឹកដោះគោ</b><i></i><span>$1.75</span></div>
+          <div class="item"><b>តែផ្កាឈូក</b><i></i><span>$1.75</span></div>
+          <div class="item"><b>តែផ្លែប៉ោម</b><i></i><span>$2.00</span></div>
+        </div>
+
+        <div>
+          <h3>កាហ្វេ</h3>
+          <div class="item"><b>កាហ្វេទឹកកក</b><i></i><span>$1.50</span></div>
+          <div class="item"><b>កាហ្វេទឹកដោះគោ</b><i></i><span>$1.75</span></div>
+          <div class="item"><b>ឡាតេ</b><i></i><span>$2.25</span></div>
+          <div class="item"><b>កាហ្វេក្តៅ</b><i></i><span>$1.25</span></div>
+        </div>
+
+        <div>
+          <h3>ម៉ាឆា</h3>
+          <div class="item"><b>ម៉ាឆាទឹកដោះគោ</b><i></i><span>$1.00</span></div>
+          <div class="item"><b>ម៉ាឆាស្ទបុឺរី</b><i></i><span>$1.00</span></div>
+          
+        </div>
+
+        <div>
+          <h3>ដើម្បីញ៉ាំជាមួយ</h3>
+          <div class="item"><b>នំបុ័ងប៊ឺ</b><i></i><span>$1.00</span></div>
+          <div class="item"><b>នំខេក</b><i></i><span>$2.00</span></div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="about" data-view="home">
+      <div class="about">
+        <div>
+          <h2>អំពីយើង</h2>
+          <p>ក្នុងនាមនាមជាមនុស្សស្មោះ យើងបានបង្កើតហាងកាហ្វេមួយដែល សម្រាប់គាំទ្រដល់វិស័យស្មោះស្នេហ៍នៅ កម្ពុជា។</p>
+          <p>ហាងរបស់យើងមានកន្លែងសម្រាប់អង្គុយលេង ធ្វើការ ឬជួបមិត្តភក្តិ ជាមួយភេសជ្ជៈត្រជាក់មួយកែវ ជាពិសេសបើបានមកជាមួយសង្សារទៀត ភេសជ្ជៈរបស់លោកអ្នកគឺកានតែមានរស់ជាតិ។</p>
+          <p>តែសូមកុំយកសង្សារគេមកផ្ដេសផ្ដាស់ ព្រោះហាងយើងខ្ញុំាជាហាងស្មោះស្នេហ៍ ដូចឆ្នេះបើសង្សារគេតាមទាន់ហើយគេវាយបែកមាត់ នោះពួកយើងនឹងមិនទទួលខុសត្រូវទេ។</p>
+        </div>
+        <dl class="facts">
+          <dt>ភេសជ្ជៈថ្មី</dt><dd>ភេសជ្ជៈធ្វើថ្មីៗ មិនធ្វើទុក</dd>
+          <dt>កម្រិតស្ករ</dt><dd>០% · ៥០% · ៧០% · ១០០%</dd>
+          <dt>មានកន្លែងអង្គុយ</dt><dd>និង Wi-Fi ឥតគិតថ្លៃ</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="visit" data-view="home">
+      <h2>ទំនាក់ទំនង</h2>
+      <dl class="facts" style="max-width:480px">
+        <dt>ទីតាំង</dt><dd>លំចង់ តាកែវ</dd>
+        <dt>ម៉ោងបើក</dt><dd>រៀងរាល់ថ្ងៃ ម៉ោង ៧:០០ ព្រឹក – ៧:០០ យប់</dd>
+        <dt>ទូរស័ព្ទ / Telegram</dt><dd>០១៥******</dd>
+        <dt>Facebook</dt><dd>IceTea Coffee</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>© 2026 iceteacoffe / រក្សាសិទ្ធិគ្រប់យ៉ាង</footer>
+</div>
+<script>
+function route(){
+  var h=location.hash.slice(1), m=h==='menu';
+  document.querySelectorAll('[data-view]').forEach(function(el){el.hidden=el.dataset.view!==(m?'menu':'home');});
+  if(m){window.scrollTo(0,0);}
+  else if(h&&h!=='top'){var t=document.getElementById(h);if(t)t.scrollIntoView();}
+  else{window.scrollTo(0,0);}
+}
+function openMap(){
+  window.open("https://www.google.com/maps/place/%E1%9E%80%E1%9F%92%E1%9E%9A%E1%9E%BC%E1%9E%85%E1%9E%86%E1%9F%92%E1%9E%98%E1%9E%B6%E1%9E%85%E1%9F%86%E1%9E%80%E1%9E%B6%E1%9E%9A%E1%9E%9F%E1%9F%92%E1%9E%9A%E1%9F%82/@11.0453452,104.7828573,18.06z/data=!4m6!3m5!1s0x31097788301396d7:0x23013feb207504d4!8m2!3d11.045545!4d104.78213!16s%2Fg%2F11gv0x1c1k?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D")
+}
+window.addEventListener('hashchange',route);
+route();
+</script>
+</body>
+</html>
