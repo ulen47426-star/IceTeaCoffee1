@@ -197,6 +197,12 @@ h1 {
    6. GLASS / DRINK ILLUSTRATION
 ======================================== */
 
+.Plogo{
+    width: 600px;
+    height: 300px;
+    padding: 30px;
+}
+
 .glass-wrap {
     display: flex;
     justify-content: center;
@@ -373,6 +379,10 @@ h1 {
 section {
     padding: 3.5rem 0;
     border-top: 1px solid var(--line);
+}
+
+.header{
+    width: 300px;
 }
 
 h2 {
