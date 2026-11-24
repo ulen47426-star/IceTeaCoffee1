@@ -21,11 +21,12 @@
 
   <main id="top">
     <div class="hero" data-view="home">
-      <div class="header">
+      <div class="">
         <h1>តែទឹកកក<br>ស្អំបេះដូង</h1>
         <p class="lead">IceTea Coffee ហាងកាហ្វេសម្រាប់មនុស្សស្មោះ </p>
         <div class="btns">
           <a class="btn" href="#menu">ភេសជ្ជៈ</a>
+          <a class="btn" href="#photo">រូបភាព</a>
           <button class="btn" onclick="openMap()">Map</button>
         </div>
       </div>
@@ -61,7 +62,7 @@
         <div>
           <h3>ម៉ាឆា</h3>
           <div class="item"><b>ម៉ាឆាទឹកដោះគោ</b><i></i><span>$1.00</span></div>
-          <div class="item"><b>ម៉ាឆាស្ត្របឺរី</b><i></i><span>$1.00</span></div>
+          <div class="item"><b>ម៉ាឆាស្ទបុឺរី</b><i></i><span>$1.00</span></div>
           
         </div>
 
@@ -74,6 +75,17 @@
         </div>
         
       </div>
+    </section>
+    <section id="photo" data-view="photo" hidden>
+      <a class="btn" href="#top">ត្រឡប់</a>
+      <h2><br>នេះជារូបភាពស្ដែងពីទឹដ្ឋភាពទូទៅរបស់ហាង</h2>
+      <div class="image">
+        <div class="imCard"><img src="p1.jpg" alt=""></div>
+        <div class="imCard"><img src="p2.jpg" alt=""></div>
+        <div class="imCard"><img src="p3.jpg" alt=""></div>
+        <div class="imCard"><img src="p4.jpg" alt=""></div>
+      </div>
+
     </section>
 
     <section id="about" data-view="home">
@@ -105,19 +117,6 @@
 
   <footer>© 2026 iceteacoffe / រក្សាសិទ្ធិគ្រប់យ៉ាង</footer>
 </div>
-<script>
-function route(){
-  var h=location.hash.slice(1), m=h==='menu';
-  document.querySelectorAll('[data-view]').forEach(function(el){el.hidden=el.dataset.view!==(m?'menu':'home');});
-  if(m){window.scrollTo(0,0);}
-  else if(h&&h!=='top'){var t=document.getElementById(h);if(t)t.scrollIntoView();}
-  else{window.scrollTo(0,0);}
-}
-function openMap(){
-  window.open("https://www.google.com/maps/place/%E1%9E%80%E1%9F%92%E1%9E%9A%E1%9E%BC%E1%9E%85%E1%9E%86%E1%9F%92%E1%9E%98%E1%9E%B6%E1%9E%85%E1%9F%86%E1%9E%80%E1%9E%B6%E1%9E%9A%E1%9E%9F%E1%9F%92%E1%9E%9A%E1%9F%82/@11.0453452,104.7828573,18.06z/data=!4m6!3m5!1s0x31097788301396d7:0x23013feb207504d4!8m2!3d11.045545!4d104.78213!16s%2Fg%2F11gv0x1c1k?entry=ttu&g_ep=EgoyMDI2MTExOC4xIKXMDSoASAFQAw%3D%3D")
-}
-window.addEventListener('hashchange',route);
-route();
-</script>
+<script src="script.js"></script>
 </body>
 </html>
